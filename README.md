@@ -6,7 +6,7 @@ Simply put:
 - it takes simple input parameters
 - performs the requests to the `ivu.aseag.de` API
 - parses the response
-- returns a pretty JSON :)
+- returns a pretty JSON 😍
 
 **NOTE**: The `ivu.aseag.de` is undocumented and may be not intended for public use. This code was put together for educational purposes. The rights to use the API should be requested to ASEAG directly.
 
