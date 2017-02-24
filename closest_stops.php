@@ -6,9 +6,14 @@ ini_set("Allow_url_include", true);
 $userLat = $_GET["lat"];
 $userLon = $_GET["lon"];
 $resultCount = 10;
+$nestedDeparturesCount = 10
 
 if (isset($_GET["resultCount"])) {
     $resultCount = intval($_GET["resultCount"]);
+}
+
+if (isset($_GET["nestedDeparturesCount"])) {
+    $resultCount = intval($_GET["nestedDeparturesCount"]);
 }
 
 $userGeoLocation = array(
@@ -64,7 +69,7 @@ function departuresForStopId($stopId) {
             "tripId" => $tripId,
         );
         
-        if (count($connections) >= 10) {
+        if (count($connections) >= $nestedDeparturesCount) {
             break;
         }
     };
